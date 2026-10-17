@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TENDA Buses — Design</title>
+<style>
+  :root { --ink: #1d2433; --muted: #5b6577; --line: #e3e6ec; --bg: #ffffff; --soft: #f5f7fa; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); }
+  main { max-width: 860px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 20px; margin-bottom: 32px; }
+  header h1 { margin: 0 0 4px; font-size: 28px; }
+  header p { margin: 0; color: var(--muted); }
+  h2 { font-size: 22px; margin: 36px 0 12px; }
+  h3 { font-size: 17px; margin: 28px 0 8px; }
+  .card { border: 1px solid var(--line); border-radius: 12px; background: var(--soft); padding: 20px; }
+  .card dl { display: grid; grid-template-columns: 140px 1fr; gap: 10px 16px; margin: 0; }
+  .card dt { font-weight: 600; }
+  .card dd { margin: 0; }
+  .example { border-left: 3px solid var(--ink); padding: 8px 14px; background: var(--soft); }
+  small { color: var(--muted); }
+  @media (max-width: 560px) { .card dl { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>TENDA Buses</h1>
+    <p>Book a guaranteed seat home to Mutare and send tracked parcels, with your family kept informed.</p>
+    <p><small>Human-readable mirror of <code>docs/DESIGN.md</code>.</small></p>
+  </header>
+
+  <section id="product-identity">
+    <h2>Product Identity</h2>
+    <p><small>Drafted: October 2026</small></p>
+    <div class="card">
+      <dl>
+        <dt>Name</dt><dd>TENDA (written "TENDA Buses" online) · tendabuses.com</dd>
+        <dt>Worldview</dt><dd>Every trip home has two people in it: the one on the bus and the one waiting at the other end.</dd>
+        <dt>We believe</dt><dd>A seat should belong to a person before they leave home, and the family waiting in Mutare deserves to know where she is.</dd>
+        <dt>We sound</dt><dd>Warm · plain · quietly proud</dd>
+        <dt>Visual style</dt><dd>Documentary photography of real Manicaland journeys · top reference: Trainline's clarity</dd>
+      </dl>
+    </div>
+
+    <h3>Name</h3>
+    <p><strong>TENDA</strong>, written "TENDA Buses" online. The booking service is simply "TENDA".</p>
+    <ul>
+      <li><strong>Say it:</strong> two syllables, easy in English and Shona.</li>
+      <li><strong>Spell it:</strong> five letters, one way to write it.</li>
+      <li><strong>Search it:</strong> clashes with the Tenda router brand. Pair with "Buses" or "Mutare" online.</li>
+      <li><strong>Feel it:</strong> decades of Manicaland goodwill.</li>
+      <li><strong>Domain:</strong> tendabuses.com (primary), booktenda.com redirecting. Check .co.zw with a Zimbabwean registrar.</li>
+    </ul>
+
+    <h3>Worldview</h3>
+    <p>Every trip home has two people in it: the one on the bus and the one waiting at the other end.</p>
+    <p>Everyday line: <strong>"Going home shouldn't be a gamble."</strong></p>
+
+    <h3>Contrarian Belief</h3>
+    <p>Most bus companies sell a seat to whoever is standing at the rank. We believe a seat should belong to a person before they leave home, and that the family waiting in Mutare deserves to know where she is.</p>
+
+    <h3>Tone of Voice</h3>
+    <ul>
+      <li><strong>Warm, but not soppy:</strong> a trusted older cousin who knows the road.</li>
+      <li><strong>Plain, but not cold:</strong> short sentences; numbers, not adjectives.</li>
+      <li><strong>Proud, but not boastful:</strong> decades of Manicaland, said quietly.</li>
+      <li><strong>Certain, but not pushy:</strong> facts, never fake urgency.</li>
+    </ul>
+    <p><strong>Language:</strong> English with a little Shona in greetings and sign-offs ("Mhoro", "Famba zvakanaka"). Never in instructions, prices or the guarantee.</p>
+    <p><strong>We say:</strong> your seat, home, your family, on time, leaves at, here's what happens next, sorry, your money back.</p>
+    <p><strong>We don't say:</strong> luxury, world-class, class is permanent, your comfort is our priority, valued customer, Dear Sir/Madam, ALL CAPS, multiple exclamation marks, unexplained jargon.</p>
+    <p class="example">"Rudo, your seat 14A is held. The bus leaves Roadport at 07:00 tomorrow. We'll tell your mother when you're on the road. Sleep well."</p>
+
+    <h3>Visual Style</h3>
+    <p><strong>Lane:</strong> documentary photography of real Manicaland journeys and real people, under the existing TENDA logo.</p>
+    <ul>
+      <li>Early-morning light on the Harare–Mutare road and Christmas Pass, warm and honest.</li>
+      <li>Real people, never models. Credited bus-spotter photos of TENDA coaches, with permission.</li>
+      <li>Logo navy and blue as anchors; clean white screens with one clear action each.</li>
+      <li>One person or one bus per image, generous sky and road.</li>
+      <li>Pair a photo with a phone showing the WhatsApp ticket.</li>
+      <li>Headlines on clean navy or white, never over busy photo areas.</li>
+    </ul>
+    <p><strong>References:</strong> Trainline (clarity), Humans of New York (one person, one line of story), Airbnb host photography (real people, real places).</p>
+  </section>
+</main>
+</body>
+</html>
