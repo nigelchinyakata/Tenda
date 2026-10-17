@@ -16,7 +16,7 @@ The route through each phase for this product: which steps run, in what order, i
 
 ## Design — `web-app`
 
-*Set 2026-10-17 · No plan · Design system from an image the member loves (to be supplied before Step 3) · Existing TENDA logo is an input to Identity*
+*Set 2026-10-17 · No plan · Design system from Trainline's iOS "Popular journeys" screen (docs/design-references/trainline-ios-popular-journeys.jpg, found on Mobbin) · Existing TENDA logo is an input to Identity*
 
 | Step | Skill | Mode | Why |
 | --- | --- | --- | --- |
