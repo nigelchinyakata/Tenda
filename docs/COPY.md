@@ -238,7 +238,7 @@ Tactics #18–19. WhatsApp and SMS are TENDA's main notification surface.
 At collection, staff check **both the 4-digit code and the collector's ID**.
 
 **Permission ask (adding a family contact):** at the moment of booking, not before:
-> "Family contact (optional): we'll send them a WhatsApp when your bus leaves and arrives."
+> "Family contact (optional)". Helper text: "They get a WhatsApp when your bus leaves and when it arrives."
 
 The family contact receives a first message explaining who added them and how to stop messages ("Reply STOP to stop these messages").
 
