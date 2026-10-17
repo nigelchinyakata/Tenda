@@ -57,21 +57,45 @@ Supporting pains are safety and comfort (overloading, rough crews) and holiday p
 
 ## Product Shape
 
-*Filled by `define-product-shape` — how the customer receives and uses the product. The shape decides which Design, Develop, and Distribute steps apply (see `productos/shapes/`).*
-
 ### Primary Shape
+
+`web-app` — a mobile-first booking site on TENDA's own domain. Passengers book and pay as a guest, with no sign-up, and get their ticket by WhatsApp or SMS. An optional account saves their family contact and parcel history.
 
 ### Secondary Shapes
 
+None. WhatsApp notifications (confirmed, boarding, departed, parcel arrived) and the staffed WhatsApp backup booking line are features of the web app, not a separate chat-assistant product.
+
 ### Why This Shape
+
+The going-home traveller lives on her phone and in WhatsApp: WhatsApp is the largest driver of mobile data use in Zimbabwe (POTRAZ). A web link works on any phone, needs no install or storage, and can be shared in family WhatsApp groups and TENDA's Facebook posts, where the audience already is.
+
+Rejected `mobile-app`, even though CAG Travellers ships an iOS app. A once-a-month traveller won't install and update an app for one trip on costly data.
+
+Rejected `productized-service`. The coach journey is TENDA's existing operation; what's new, and what gets designed and built, is the booking and tracking layer.
 
 ### Live Means
 
+A stranger opens the TENDA site on their phone over HTTPS, books and pays for a real Harare → Mutare seat through live checkout, and receives a WhatsApp or SMS ticket with seat number and reference. They also get the live departure messages, and their saved family contact can receive them too. The parcel flow works end to end as well: a booking reference is issued at drop-off and the arrival message with a collection code reaches the Mutare contact. No test keys, seeded data or staff-only steps are involved.
+
 ### First Sale Means
+
+A real passenger (not TENDA staff or the member) pays for a seat through the site's live checkout via a Zimbabwean gateway (EcoCash, OneMoney or card), the money lands in TENDA's merchant account, and the seat is issued and honoured at boarding.
 
 ### Build Implications
 
+- **Mobile-first and light:** it must load fast on low-end Android phones and costly data.
+- **Booking and seats:** guest checkout; a schedule and seat inventory per coach that sells only real seats (no overbooking); seat selection.
+- **Payments:** a local gateway is required, because Stripe isn't available to Zimbabwean businesses. The candidates are Paynow (most widely used) and ContiPay (EcoCash, OneMoney, Visa and Mastercard in one integration). Card support differs between gateways and must be confirmed in the PRD. USD pricing.
+- **Messaging:** WhatsApp Business API (or a provider such as Twilio or 360dialog) plus SMS fallback for tickets, departure updates and parcel notifications. These carry per-message costs.
+- **Parcels:** waybill references, collection codes, and status updates at drop-off and arrival.
+- **Staff tools:** a simple dashboard for TENDA staff to see bookings per coach, mark boarding and departure, log parcels in and out, and issue refunds under the guarantee.
+- **Public pages:** an on-time board and parcel counter fed from that departure and parcel data.
+- **Data:** stores a second person's phone number (the family contact) with consent; follows Zimbabwe's Cyber and Data Protection Act.
+- **Hosting:** TENDA's own domain over HTTPS. No app-store review.
+
 ### Sequence
+
+None planned. Revisit after 3 months live: if more than about 30% of bookings still arrive through the WhatsApp backup line, add a WhatsApp booking assistant as a secondary `chat-assistant` shape. An Android app is considered only if repeat travellers ask for one.
 
 ## 2. Customer Persona
 
@@ -148,4 +172,17 @@ Researched October 2026. Also draws on `docs/tenda-brand-research.md`.
   - Zimbabwe Long Distance Buses group thread: "WHAT PASSENGERS ACTUALLY WANT: 'I want to arrive safely…'", with replies describing a crew as "very rough".
   - Reports of overloading and breakdowns: IOL (16 Oct 2026, overloaded Zimbabwe buses on the N1); The Zimbabwean (Dec 2025); Mbare Musika breakdown posts.
 - **TENDA reputation:** a Facebook group review ("organized and clean… very reliable and safe"); "pride of Mutare" posts in bus-fan groups; the X history thread by @HistoryFactou (11 Mar 2026), which is unsourced.
-- **Working assumptions still to confirm with TENDA:** Harare loading point, current fare, departure policy, the refund-plus-next-coach guarantee, the US$50 parcel cap, the founding year, the current review rating, and whether same-day parcels are feasible on scheduled coaches.
+- **Working assumptions still to confirm with TENDA (offer):** Harare loading point, current fare, departure policy, the refund-plus-next-coach guarantee, the US$50 parcel cap, the founding year, the current review rating, and whether same-day parcels are feasible on scheduled coaches.
+
+### Product Shape
+
+Researched October 2026.
+
+- **Comparable shapes:** CAG Travellers sells through a website (https://cagtours.co.zw/) and an iOS app. Intercape sells through a web booking flow plus retail partners. FlixBus sells through a web app plus a mobile app.
+- **WhatsApp and data use:** POTRAZ reports WhatsApp as the largest driver of mobile data use in Zimbabwe (about 36.76%), via Techzim, https://www.facebook.com/techzim/posts/1564945378978127/
+- **Payment gateways:**
+  - Paynow is the most widely integrated, covering EcoCash, OneMoney, Visa and Mastercard according to zimapps.co.zw and flixtechs.co.zw. Nyuchi Africa's 2026 review says Paynow does not support Visa or Mastercard.
+  - ContiPay covers Visa and Mastercard (3D Secure), EcoCash, OneMoney, InnBucks and ZIPIT in one API (Nyuchi Africa, https://www.nyuchi.com/blog/zimbabwe-payment-gateways-2026).
+  - Pesepay specialises in EcoCash.
+  - Card support must be confirmed in the PRD.
+- **Constraint:** Stripe does not onboard Zimbabwean businesses, so the web-app shape's default Stripe checkout is replaced by a local gateway.
