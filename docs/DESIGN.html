@@ -3,35 +3,139 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TENDA Buses — Design</title>
+<title>TENDA Road — Design system</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-  :root { --ink: #1d2433; --muted: #5b6577; --line: #e3e6ec; --bg: #ffffff; --soft: #f5f7fa; }
-  * { box-sizing: border-box; }
-  body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); }
-  main { max-width: 860px; margin: 0 auto; padding: 40px 20px 80px; }
-  header { border-bottom: 1px solid var(--line); padding-bottom: 20px; margin-bottom: 32px; }
-  header h1 { margin: 0 0 4px; font-size: 28px; }
-  header p { margin: 0; color: var(--muted); }
-  h2 { font-size: 22px; margin: 36px 0 12px; }
-  h3 { font-size: 17px; margin: 28px 0 8px; }
-  .card { border: 1px solid var(--line); border-radius: 12px; background: var(--soft); padding: 20px; }
-  .card dl { display: grid; grid-template-columns: 140px 1fr; gap: 10px 16px; margin: 0; }
-  .card dt { font-weight: 600; }
-  .card dd { margin: 0; }
-  .example { border-left: 3px solid var(--ink); padding: 8px 14px; background: var(--soft); }
-  small { color: var(--muted); }
-  @media (max-width: 560px) { .card dl { grid-template-columns: 1fr; } }
+:root{
+  --color-primary:#0B2B5C;
+  --color-on-primary:#FFFFFF;
+  --color-primary-container:#E8F0FB;
+  --color-on-primary-container:#0B2B5C;
+  --color-action:#1570C9;
+  --color-on-action:#FFFFFF;
+  --color-action-pressed:#0F5BA8;
+  --color-accent:#F2B233;
+  --color-on-accent:#0B2B5C;
+  --color-accent-text:#8A5A00;
+  --color-surface:#FFFFFF;
+  --color-surface-container:#F4F6FA;
+  --color-surface-container-high:#E8ECF2;
+  --color-on-surface:#121A2B;
+  --color-on-surface-variant:#4A5568;
+  --color-outline:#8792A6;
+  --color-outline-variant:#DCE2EB;
+  --color-error:#B3261E;
+  --color-on-error:#FFFFFF;
+  --color-error-container:#FCE8E6;
+  --color-on-error-container:#7A1A14;
+  --color-success:#1E7B45;
+  --color-on-success:#FFFFFF;
+  --color-success-container:#E3F4EA;
+  --color-on-success-container:#14532D;
+  --type-display-lg-family:"Figtree",system-ui,sans-serif;
+  --type-display-lg-size:40px;
+  --type-display-lg-weight:800;
+  --type-display-lg-line:1.1;
+  --type-display-lg-tracking:-0.02em;
+  --type-headline-lg-family:"Figtree",system-ui,sans-serif;
+  --type-headline-lg-size:28px;
+  --type-headline-lg-weight:800;
+  --type-headline-lg-line:1.2;
+  --type-headline-lg-tracking:-0.01em;
+  --type-headline-md-family:"Figtree",system-ui,sans-serif;
+  --type-headline-md-size:22px;
+  --type-headline-md-weight:700;
+  --type-headline-md-line:1.25;
+  --type-headline-md-tracking:0;
+  --type-title-md-family:"Figtree",system-ui,sans-serif;
+  --type-title-md-size:18px;
+  --type-title-md-weight:700;
+  --type-title-md-line:1.3;
+  --type-title-md-tracking:0;
+  --type-body-lg-family:"Figtree",system-ui,sans-serif;
+  --type-body-lg-size:18px;
+  --type-body-lg-weight:400;
+  --type-body-lg-line:1.5;
+  --type-body-lg-tracking:0;
+  --type-body-md-family:"Figtree",system-ui,sans-serif;
+  --type-body-md-size:16px;
+  --type-body-md-weight:400;
+  --type-body-md-line:1.5;
+  --type-body-md-tracking:0;
+  --type-body-sm-family:"Figtree",system-ui,sans-serif;
+  --type-body-sm-size:14px;
+  --type-body-sm-weight:500;
+  --type-body-sm-line:1.45;
+  --type-body-sm-tracking:0;
+  --type-label-md-family:"Figtree",system-ui,sans-serif;
+  --type-label-md-size:16px;
+  --type-label-md-weight:700;
+  --type-label-md-line:1.25;
+  --type-label-md-tracking:0;
+  --type-label-sm-family:"Figtree",system-ui,sans-serif;
+  --type-label-sm-size:13px;
+  --type-label-sm-weight:700;
+  --type-label-sm-line:1.3;
+  --type-label-sm-tracking:0.02em;
+  --type-numeral-lg-family:"Figtree",system-ui,sans-serif;
+  --type-numeral-lg-size:32px;
+  --type-numeral-lg-weight:800;
+  --type-numeral-lg-line:1.1;
+  --type-numeral-lg-tracking:-0.01em;
+  --rounded-none:0;
+  --rounded-sm:8px;
+  --rounded-md:12px;
+  --rounded-lg:16px;
+  --rounded-xl:28px;
+  --rounded-full:9999px;
+  --space-xs:4px;
+  --space-sm:8px;
+  --space-md:16px;
+  --space-lg:24px;
+  --space-xl:40px;
+  --space-gutter:16px;
+  --space-margin:20px;
+}
+.t-display-lg{font-family:var(--type-display-lg-family);font-size:var(--type-display-lg-size);font-weight:var(--type-display-lg-weight);line-height:var(--type-display-lg-line);letter-spacing:var(--type-display-lg-tracking)}
+.t-headline-lg{font-family:var(--type-headline-lg-family);font-size:var(--type-headline-lg-size);font-weight:var(--type-headline-lg-weight);line-height:var(--type-headline-lg-line);letter-spacing:var(--type-headline-lg-tracking)}
+.t-headline-md{font-family:var(--type-headline-md-family);font-size:var(--type-headline-md-size);font-weight:var(--type-headline-md-weight);line-height:var(--type-headline-md-line);letter-spacing:var(--type-headline-md-tracking)}
+.t-title-md{font-family:var(--type-title-md-family);font-size:var(--type-title-md-size);font-weight:var(--type-title-md-weight);line-height:var(--type-title-md-line);letter-spacing:var(--type-title-md-tracking)}
+.t-body-lg{font-family:var(--type-body-lg-family);font-size:var(--type-body-lg-size);font-weight:var(--type-body-lg-weight);line-height:var(--type-body-lg-line);letter-spacing:var(--type-body-lg-tracking)}
+.t-body-md{font-family:var(--type-body-md-family);font-size:var(--type-body-md-size);font-weight:var(--type-body-md-weight);line-height:var(--type-body-md-line);letter-spacing:var(--type-body-md-tracking)}
+.t-body-sm{font-family:var(--type-body-sm-family);font-size:var(--type-body-sm-size);font-weight:var(--type-body-sm-weight);line-height:var(--type-body-sm-line);letter-spacing:var(--type-body-sm-tracking)}
+.t-label-md{font-family:var(--type-label-md-family);font-size:var(--type-label-md-size);font-weight:var(--type-label-md-weight);line-height:var(--type-label-md-line);letter-spacing:var(--type-label-md-tracking)}
+.t-label-sm{font-family:var(--type-label-sm-family);font-size:var(--type-label-sm-size);font-weight:var(--type-label-sm-weight);line-height:var(--type-label-sm-line);letter-spacing:var(--type-label-sm-tracking)}
+.t-numeral-lg{font-family:var(--type-numeral-lg-family);font-size:var(--type-numeral-lg-size);font-weight:var(--type-numeral-lg-weight);line-height:var(--type-numeral-lg-line);letter-spacing:var(--type-numeral-lg-tracking)}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--type-body-md-family);font-size:var(--type-body-md-size);line-height:1.6;color:var(--color-on-surface);background:var(--color-surface)}
+main{max-width:960px;margin:0 auto;padding:40px 20px 80px}
+header.top{border-bottom:1px solid var(--color-outline-variant);padding-bottom:20px;margin-bottom:32px}
+h1{margin:0 0 4px;font-size:28px} h2{font-size:22px;margin:48px 0 12px;padding-top:12px;border-top:1px solid var(--color-outline-variant)} h3{font-size:17px;margin:24px 0 8px}
+small{color:var(--color-on-surface-variant)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.swatch{display:flex;gap:10px;align-items:center;border:1px solid var(--color-outline-variant);border-radius:12px;padding:8px}
+.swatch .chip{width:48px;height:48px;border-radius:10px;display:grid;place-items:center;font-weight:700;border:1px solid var(--color-outline-variant)}
+.spec{margin:10px 0} .bar{height:12px;background:var(--color-action);border-radius:4px}
+.rbox{width:96px;height:72px;border:2px solid var(--color-primary);display:inline-grid;place-items:center;margin:6px;text-align:center}
+.comp{display:flex;flex-direction:column;gap:6px;align-items:flex-start;margin:14px 0}
+.card{border:1px solid var(--color-outline-variant);border-radius:12px;background:var(--color-surface-container);padding:20px}
+.card dl{display:grid;grid-template-columns:140px 1fr;gap:10px 16px;margin:0} .card dt{font-weight:700} .card dd{margin:0}
+.example{border-left:3px solid var(--color-primary);padding:8px 14px;background:var(--color-surface-container)}
+.elev{display:flex;gap:16px;flex-wrap:wrap} .elev div{padding:20px;border-radius:16px;min-width:180px}
+.dd{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:600px){.dd,.card dl{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <main>
-  <header>
-    <h1>TENDA Buses</h1>
-    <p>Book a guaranteed seat home to Mutare and send tracked parcels, with your family kept informed.</p>
-    <p><small>Human-readable mirror of <code>docs/DESIGN.md</code>.</small></p>
-  </header>
-
-  <section id="product-identity">
+<header class="top">
+  <h1>TENDA Road</h1>
+  <p>A light, mobile-first booking system in TENDA navy and signal blue with a heritage-gold accent — Trainline-style clarity, one task per screen, built for low-end Android phones and costly data.</p>
+  <p><small>Human-readable mirror of <code>docs/DESIGN.md</code>. Tokens render live from the same values.</small></p>
+</header>
+<section id="product-identity">
     <h2>Product Identity</h2>
     <p><small>Drafted: October 2026</small></p>
     <div class="card">
@@ -85,6 +189,27 @@
     </ul>
     <p><strong>References:</strong> Trainline (clarity), Humans of New York (one person, one line of story), Airbnb host photography (real people, real places).</p>
   </section>
+<section id="brand-style"><h2>Brand &amp; Style</h2><p>TENDA Road is a calm, mobile-first booking system for people going home: the structure of Trainline's app (a navy header band, a white search pill, photo route cards, one task per screen) wearing TENDA's own colours from its logo. The aesthetic intent is "certain at a glance": Rudo, on a low-end Android phone with a WhatsApp bundle, should see her seat, time and price without reading twice. Warmth comes from documentary photography of real Manicaland journeys and from heritage gold used sparingly, never from decoration. It must never become a dark, flashy "luxury coach" look, a busy page with ads or several competing buttons, or tiny grey text that's hard to read outdoors at the rank.</p></section>
+<section id="colors"><h2>Colors</h2><p><code>primary</code> is TENDA navy (#0B2B5C), sampled from the logo wordmark: it fills the header band, headings and the brand's big moments. <code>action</code> is the logo's bright "BUSES" blue (#1570C9), reserved for the one primary button on each screen and for selected states, so the next step is always the blue thing. <code>accent</code> is heritage gold (#F2B233), echoing TENDA's first gold-striped bus; it appears only as a fill behind navy text (seats-left chips, the seat-confirmed moment, route arrows), and <code>accent-text</code> (#8A5A00) is used where gold must be text on white. Pages are white <code>surface</code> with a pale-blue <code>primary-container</code> band to separate sections, as Trainline does. <code>on-surface-variant</code> (#4A5568) is the lightest text colour allowed, dark enough to read in sunlight. Every text pairing meets WCAG AA: white on action is about 5.0:1, navy on gold about 7.4:1, and on-surface-variant on white about 7.5:1.</p><div class="grid"><div class="swatch"><div class="chip" style="background:var(--color-primary);color:var(--color-on-primary, var(--color-on-surface))">Aa</div><div><strong>primary</strong><br><code>#0B2B5C</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-on-primary);color:var(--color-on-on-primary, var(--color-on-surface))">Aa</div><div><strong>on-primary</strong><br><code>#FFFFFF</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-primary-container);color:var(--color-on-primary-container, var(--color-on-surface))">Aa</div><div><strong>primary-container</strong><br><code>#E8F0FB</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-on-primary-container);color:var(--color-on-on-primary-container, var(--color-on-surface))">Aa</div><div><strong>on-primary-container</strong><br><code>#0B2B5C</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-action);color:var(--color-on-action, var(--color-on-surface))">Aa</div><div><strong>action</strong><br><code>#1570C9</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-on-action);color:var(--color-on-on-action, var(--color-on-surface))">Aa</div><div><strong>on-action</strong><br><code>#FFFFFF</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-action-pressed);color:var(--color-on-action-pressed, var(--color-on-surface))">Aa</div><div><strong>action-pressed</strong><br><code>#0F5BA8</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-accent);color:var(--color-on-accent, var(--color-on-surface))">Aa</div><div><strong>accent</strong><br><code>#F2B233</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-on-accent);color:var(--color-on-on-accent, var(--color-on-surface))">Aa</div><div><strong>on-accent</strong><br><code>#0B2B5C</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-accent-text);color:var(--color-on-accent-text, var(--color-on-surface))">Aa</div><div><strong>accent-text</strong><br><code>#8A5A00</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-surface);color:var(--color-on-surface, var(--color-on-surface))">Aa</div><div><strong>surface</strong><br><code>#FFFFFF</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-surface-container);color:var(--color-on-surface-container, var(--color-on-surface))">Aa</div><div><strong>surface-container</strong><br><code>#F4F6FA</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-surface-container-high);color:var(--color-on-surface-container-high, var(--color-on-surface))">Aa</div><div><strong>surface-container-high</strong><br><code>#E8ECF2</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-on-surface);color:var(--color-on-on-surface, var(--color-on-surface))">Aa</div><div><strong>on-surface</strong><br><code>#121A2B</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-on-surface-variant);color:var(--color-on-on-surface-variant, var(--color-on-surface))">Aa</div><div><strong>on-surface-variant</strong><br><code>#4A5568</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-outline);color:var(--color-on-outline, var(--color-on-surface))">Aa</div><div><strong>outline</strong><br><code>#8792A6</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-outline-variant);color:var(--color-on-outline-variant, var(--color-on-surface))">Aa</div><div><strong>outline-variant</strong><br><code>#DCE2EB</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-error);color:var(--color-on-error, var(--color-on-surface))">Aa</div><div><strong>error</strong><br><code>#B3261E</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-on-error);color:var(--color-on-on-error, var(--color-on-surface))">Aa</div><div><strong>on-error</strong><br><code>#FFFFFF</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-error-container);color:var(--color-on-error-container, var(--color-on-surface))">Aa</div><div><strong>error-container</strong><br><code>#FCE8E6</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-on-error-container);color:var(--color-on-on-error-container, var(--color-on-surface))">Aa</div><div><strong>on-error-container</strong><br><code>#7A1A14</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-success);color:var(--color-on-success, var(--color-on-surface))">Aa</div><div><strong>success</strong><br><code>#1E7B45</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-on-success);color:var(--color-on-on-success, var(--color-on-surface))">Aa</div><div><strong>on-success</strong><br><code>#FFFFFF</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-success-container);color:var(--color-on-success-container, var(--color-on-surface))">Aa</div><div><strong>success-container</strong><br><code>#E3F4EA</code></div></div><div class="swatch"><div class="chip" style="background:var(--color-on-success-container);color:var(--color-on-on-success-container, var(--color-on-surface))">Aa</div><div><strong>on-success-container</strong><br><code>#14532D</code></div></div></div></section>
+<section id="typography"><h2>Typography</h2><p>One family, Figtree (free on Google Fonts and the closest free match to Trainline's Circular), keeps pages to a single font download on costly data. Headings use 700–800 weights in sentence case: <code>display-lg</code> for the landing page, <code>headline-lg</code> in the header band, <code>headline-md</code> for screen titles, <code>title-md</code> for route names like "Harare → Mutare". <code>numeral-lg</code> sets departure times, seat numbers and prices large, with tabular numerals, because those are the facts she scans for. Body text never drops below 14px (<code>body-sm</code>, weight 500); 16px is the default. Buttons and chips use bold labels (<code>label-md</code>, <code>label-sm</code>). There are no all-caps labels, matching the copy rules in <code>docs/COPY.md</code>.</p><div class="spec"><div class="t-display-lg">Harare → Mutare 07:00</div><small>display-lg · 40px / 800 / 1.1</small></div><div class="spec"><div class="t-headline-lg">Harare → Mutare 07:00</div><small>headline-lg · 28px / 800 / 1.2</small></div><div class="spec"><div class="t-headline-md">Harare → Mutare 07:00</div><small>headline-md · 22px / 700 / 1.25</small></div><div class="spec"><div class="t-title-md">Harare → Mutare 07:00</div><small>title-md · 18px / 700 / 1.3</small></div><div class="spec"><div class="t-body-lg">Harare → Mutare 07:00</div><small>body-lg · 18px / 400 / 1.5</small></div><div class="spec"><div class="t-body-md">Harare → Mutare 07:00</div><small>body-md · 16px / 400 / 1.5</small></div><div class="spec"><div class="t-body-sm">Harare → Mutare 07:00</div><small>body-sm · 14px / 500 / 1.45</small></div><div class="spec"><div class="t-label-md">Harare → Mutare 07:00</div><small>label-md · 16px / 700 / 1.25</small></div><div class="spec"><div class="t-label-sm">Harare → Mutare 07:00</div><small>label-sm · 13px / 700 / 1.3</small></div><div class="spec"><div class="t-numeral-lg">Harare → Mutare 07:00</div><small>numeral-lg · 32px / 800 / 1.1</small></div></section>
+<section id="layout"><h2>Layout &amp; Spacing</h2><p>The layout is a single column designed at 360px wide first, with 20px side margins and a 16px gutter; on desktop the content sits in a 480px booking column beside a photo, never stretched wide. Spacing follows a 4/8 rhythm: 8px inside groups, 16px between related items, 24px between blocks, 40px between sections. Density is comfortable, not tight: one primary action per screen, placed where a thumb reaches it at the bottom of the viewport on phones. Route cards scroll horizontally in a row, as in Trainline's "Popular journeys", so the home screen stays short.</p><div class="spec"><div class="bar" style="width:var(--space-xs)"></div><small>xs · 4px</small></div><div class="spec"><div class="bar" style="width:var(--space-sm)"></div><small>sm · 8px</small></div><div class="spec"><div class="bar" style="width:var(--space-md)"></div><small>md · 16px</small></div><div class="spec"><div class="bar" style="width:var(--space-lg)"></div><small>lg · 24px</small></div><div class="spec"><div class="bar" style="width:var(--space-xl)"></div><small>xl · 40px</small></div><div class="spec"><div class="bar" style="width:var(--space-gutter)"></div><small>gutter · 16px</small></div><div class="spec"><div class="bar" style="width:var(--space-margin)"></div><small>margin · 20px</small></div></section>
+<section id="elevation"><h2>Elevation &amp; Depth</h2><p>TENDA Road is almost flat. Depth comes from colour bands (navy header, pale-blue section band, white cards) and 1px <code>outline-variant</code> hairlines, not shadows, which keeps rendering cheap on low-end phones. The only shadow in the system is a soft one under the search pill where it overlaps the navy header band, so it reads as lifted. Modals and the toast sit on a 40% navy scrim rather than a blur.</p>
+<div class="elev"><div style="background:var(--color-primary);color:var(--color-on-primary)">Header band (level 0)</div><div style="background:var(--color-primary-container);color:var(--color-on-primary-container)">Section band</div><div style="background:var(--color-surface);border:1px solid var(--color-outline-variant)">Card · hairline</div><div style="background:var(--color-surface);border-radius:9999px;box-shadow:0 6px 18px rgba(11,43,92,.18)">Search pill · the one shadow</div></div></section>
+<section id="shapes"><h2>Shapes</h2><p>Shapes are soft and friendly, matching "warm, but plain": interactive controls (buttons, search pill, chips, toast) are fully rounded pills; cards and photos use 16px corners; inputs use 12px; seat tiles use 8px so the seat map stays compact. The navy header band has a 28px rounded bottom edge, echoing Trainline's curved header. Nothing is sharp-cornered except full-bleed photos at the top of the landing page.</p><div class="rbox" style="border-radius:var(--rounded-none)"><small>none<br>0</small></div><div class="rbox" style="border-radius:var(--rounded-sm)"><small>sm<br>8px</small></div><div class="rbox" style="border-radius:var(--rounded-md)"><small>md<br>12px</small></div><div class="rbox" style="border-radius:var(--rounded-lg)"><small>lg<br>16px</small></div><div class="rbox" style="border-radius:var(--rounded-xl)"><small>xl<br>28px</small></div><div class="rbox" style="border-radius:var(--rounded-full)"><small>full<br>9999px</small></div></section>
+<section id="components"><h2>Components</h2><ul><li><strong>Header band:</strong> navy, with the screen title in white and the search pill overlapping its rounded bottom edge.</li><li><strong>Search pill:</strong> a white, 56px-tall fully rounded field summarising From, To and Date. Tapping it opens the full search form.</li><li><strong>Primary button:</strong> a blue pill, 52px tall, always a verb plus a noun from <code>docs/COPY.md</code> ("Book seat", "Pay US$10 with EcoCash"). It has pressed and disabled variants; disabled uses grey with readable text, never faded blue.</li><li><strong>Secondary button:</strong> white with navy text and a navy hairline. It carries the second choice ("Hold seat, pay cash", "Keep booking").</li><li><strong>Input fields:</strong> 52px tall with a visible label above. In the error state the border and helper text turn <code>error</code>, with the helper text explaining the fix.</li><li><strong>Route card:</strong> a 4:3 photo on top, then "Harare → Mutare" in <code>title-md</code> and the duration in <code>body-sm</code>.</li><li><strong>Departure row:</strong> time in <code>numeral-lg</code>, then arrival, price and a gold seats-left chip. It turns pale blue when selected.</li><li><strong>Seat tiles:</strong> 44px touch targets in three states: available (white with a navy outline), selected (blue), taken (grey).</li><li><strong>Ticket card:</strong> a white card with seat, date, departure time and Roadport in large numerals, plus the booking reference. It's what she screenshots.</li><li><strong>Banners:</strong> error and success banners use the container colours with dark text.</li><li><strong>Toast:</strong> a dark pill at the bottom, 2–5 words, auto-dismissed.</li><li><strong>Bottom navigation:</strong> the four lexicon items, Book · My bookings · Parcels · Help.</li></ul><div class="comp"><div class="t-headline-lg" style="background:var(--color-primary);color:var(--color-on-primary);border-radius:var(--rounded-xl);padding:20px">Where to, Rudo?</div><small><code>header-band</code></small></div><div class="comp"><div class="t-body-md" style="border:1px solid var(--color-outline-variant);background:var(--color-surface);color:var(--color-on-surface);border-radius:var(--rounded-full);padding:12px 20px;min-height:56px">Harare → Mutare · Sat 25 Oct</div><small><code>search-pill</code></small></div><div class="comp"><div class="t-label-md" style="background:var(--color-action);color:var(--color-on-action);border-radius:var(--rounded-full);padding:14px 24px;min-height:52px">Book seat</div><small><code>button-primary</code></small></div><div class="comp"><div class="t-label-md" style="background:var(--color-action-pressed);color:var(--color-on-action);border-radius:var(--rounded-full);padding:14px 24px;min-height:52px">Book seat (pressed)</div><small><code>button-primary-pressed</code></small></div><div class="comp"><div class="t-label-md" style="background:var(--color-surface-container-high);color:var(--color-on-surface-variant);border-radius:var(--rounded-full);padding:14px 24px;min-height:52px">Book seat (disabled)</div><small><code>button-primary-disabled</code></small></div><div class="comp"><div class="t-label-md" style="border:1.5px solid var(--color-primary);background:var(--color-surface);color:var(--color-primary);border-radius:var(--rounded-full);padding:14px 24px;min-height:52px">Hold seat, pay cash</div><small><code>button-secondary</code></small></div><div class="comp"><div class="t-body-md" style="border:1px solid var(--color-outline-variant);background:var(--color-surface);color:var(--color-on-surface);border-radius:var(--rounded-md);padding:14px 16px;min-height:52px">077 123 4567</div><small><code>input-field</code></small></div><div class="comp"><div class="t-body-md" style="border:2px solid var(--color-error);background:var(--color-surface);color:var(--color-on-surface);border-radius:var(--rounded-md);padding:14px 16px;min-height:52px">077 12</div><small><code>input-field-error</code></small></div><div class="comp"><div class="t-title-md" style="border:1px solid var(--color-outline-variant);background:var(--color-surface);color:var(--color-on-surface);border-radius:var(--rounded-lg);padding:0"><div style="width:260px;height:150px;background:var(--color-surface-container-high);border-radius:16px 16px 0 0;display:grid;place-items:center"><small>Photo: Christmas Pass</small></div><div style="padding:12px 16px">Harare → Mutare<br><small class="t-body-sm">3h 30m</small></div></div><small><code>route-card</code></small></div><div class="comp"><div class="t-body-md" style="border:1px solid var(--color-outline-variant);background:var(--color-surface);color:var(--color-on-surface);border-radius:var(--rounded-lg);padding:16px">07:00 → 10:30 · US$10</div><small><code>departure-row</code></small></div><div class="comp"><div class="t-body-md" style="background:var(--color-primary-container);color:var(--color-on-primary-container);border-radius:var(--rounded-lg);padding:16px">07:00 → 10:30 · US$10 (selected)</div><small><code>departure-row-selected</code></small></div><div class="comp"><div class="t-label-sm" style="border:1px solid var(--color-outline-variant);background:var(--color-surface);color:var(--color-primary);border-radius:var(--rounded-sm);width:44px;height:44px;display:inline-grid;place-items:center;padding:0">14A</div><small><code>seat-available</code></small></div><div class="comp"><div class="t-label-sm" style="background:var(--color-action);color:var(--color-on-action);border-radius:var(--rounded-sm);width:44px;height:44px;display:inline-grid;place-items:center;padding:0">14B</div><small><code>seat-selected</code></small></div><div class="comp"><div class="t-label-sm" style="background:var(--color-surface-container-high);color:var(--color-on-surface-variant);border-radius:var(--rounded-sm);width:44px;height:44px;display:inline-grid;place-items:center;padding:0">14C</div><small><code>seat-taken</code></small></div><div class="comp"><div class="t-label-sm" style="background:var(--color-accent);color:var(--color-on-accent);border-radius:var(--rounded-full);padding:4px 10px">3 seats left</div><small><code>chip-seats-left</code></small></div><div class="comp"><div class="t-body-md" style="border:1px solid var(--color-outline-variant);background:var(--color-surface);color:var(--color-on-surface);border-radius:var(--rounded-lg);padding:20px">Seat 14A · Sat 25 Oct · leaves Roadport 07:00</div><small><code>ticket-card</code></small></div><div class="comp"><div class="t-body-sm" style="background:var(--color-error-container);color:var(--color-on-error-container);border-radius:var(--rounded-md);padding:12px 16px">Payment didn&#x27;t go through. Your seat is held for 10 more minutes.</div><small><code>banner-error</code></small></div><div class="comp"><div class="t-body-sm" style="background:var(--color-success-container);color:var(--color-on-success-container);border-radius:var(--rounded-md);padding:12px 16px">Hold paid</div><small><code>banner-success</code></small></div><div class="comp"><div class="t-body-sm" style="background:var(--color-on-surface);color:var(--color-surface);border-radius:var(--rounded-full);padding:10px 16px">Date changed</div><small><code>toast</code></small></div><div class="comp"><div class="t-label-sm" style="border:1px solid var(--color-outline-variant);background:var(--color-surface);color:var(--color-on-surface-variant);min-height:64px">Book · My bookings · Parcels · Help</div><small><code>bottom-nav</code></small></div></section>
+<section id="dos-donts"><h2>Do's and Don'ts</h2><p><strong>Do:</strong>
+- Use exactly one blue primary button per screen.
+- Show the seat, time and price in large numerals before anything else.
+- Use real photography of Manicaland roads, buses and people on route cards and the landing page.
+- Use gold only behind navy text, and only for seats-left, the confirmed moment and route arrows.
+- Keep every touch target at least 44px.</p>
+<p><strong>Don't:</strong>
+- Use a dark or flashy "luxury coach" theme.
+- Put several competing buttons or any ads on a screen.
+- Use grey text lighter than <code>on-surface-variant</code> or smaller than 14px.
+- Use gold as text on white (use <code>accent-text</code>).
+- Add drop shadows to cards, or gradients anywhere.
+- Load a second font family.</p></section>
 </main>
 </body>
 </html>
