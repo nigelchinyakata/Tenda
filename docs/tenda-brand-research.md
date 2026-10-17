@@ -129,7 +129,7 @@ TENDA currently holds a **heritage and regional-pride** position: "The Pride of 
 
 ---
 
-## 4. Recommended direction (applied in `/website`)
+## 4. Recommended direction
 
 - **Palette:** Tenda Navy `#0A2550`, Highland Blue `#1668D0`, Heritage Gold `#F2B233`, Mist `#EEF3FA`, Ink `#0B1424`.
 - **Type:** *Archivo* (expanded, black italic) for display, which echoes the existing slanted wordmark. *Inter* for UI text. Drop the script from small sizes and keep it only for large hero or livery moments.
