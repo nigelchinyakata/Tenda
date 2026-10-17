@@ -99,33 +99,153 @@ None planned. Revisit after 3 months live: if more than about 30% of bookings st
 
 ## 2. Customer Persona
 
-*Filled by `define-customer-persona`.*
-
 ### Header
+
+**Persona:** Rudo, the family's Harare link
+
+**Tagline:** A Manicaland-born working woman in Harare who goes home to Mutare at month-end and holidays, carrying or sending the family's groceries and medicine. She can't plan the trip because she never knows if she'll get a seat or when the bus will actually leave.
 
 ### Identity
 
+**Role:** A shop assistant at a Harare city-centre supermarket or wholesaler, earning about US$250–300 a month (close to the national average of about US$253), sometimes topped up with small side-selling.
+
+**One-line description:** 32, born in Sakubva, Mutare. She's been in Harare 8 years, sharing a rented room in Glen View. She's the family's Harare link: she brings groceries, medicine and school things home, and her mother calls her when something is needed.
+
 ### Problem Context
+
+**When does the problem come up?** The Saturday after month-end payday, and at Easter and Christmas. She starts planning on Friday.
+
+**Where (physical setting, device, time of day)?** Friday lunch break at work, on a Tecno or Itel Android phone with a WhatsApp bundle and little open data, trying to find out which bus leaves Saturday morning and whether it'll be full. Then at the Harare rank by about 6am on Saturday, holding two bags of groceries.
+
+**What's the emotional state?** Anxious and rushed. She's up before dawn, carrying money and goods through a crowded rank, and unsure whether she'll get a seat on an early bus or lose half her short weekend waiting.
+
+**Who else is around?** Her mother in Sakubva texting "uri kupi?" ("where are you?"); sometimes a niece or nephew travelling with her; touts and conductors at the rank.
 
 ### Behaviors & Habits
 
+**What do they do repeatedly to solve the problem?**
+- On Friday she asks in her family or workmates' WhatsApp group "ko mabhazi eMutare ari kuenda nguvai mangwana?" ("what time are the Mutare buses leaving tomorrow?").
+- On Saturday she gets to the rank very early, about 6am, and queues. She takes whichever bus is loading first rather than the one she trusts, because she has already lost time.
+
+**What workarounds have they built?**
+- She sends parcels with a known conductor or a travelling cousin, then calls home repeatedly to check they arrived.
+- She sends her mother a photo of the bus number plate so the family can watch for it.
+
+The real cost of her habit is time and sleep, not money.
+
 ### Tools & Tech Fluency
+
+**Apps and tools they currently use:** WhatsApp (all day, on a bundle), Facebook (often Facebook Lite), TikTok, and EcoCash through the `*151#` USSD menu (typed phone codes, no app or data needed) for airtime, ZESA electricity tokens and sending money home.
+
+**Last new tool adopted (and did it stick?):** The EcoCash app or InnBucks to send money to her mother. It stuck because it saved a trip to an agent.
+
+**Comfort level with online payments:** She pays with mobile money (EcoCash) and cash in USD, both regularly. She has never paid a business through a website. A checkout that hands off to an EcoCash prompt on her phone feels familiar; typing card details doesn't. She needs two ways to pay: EcoCash at checkout, and "reserve now, pay cash at a TENDA office or agent before a deadline".
+
+**Trust level:** She trusts WhatsApp messages from a real, verified business number. She distrusts links from strangers because of scams. AI tools play no part in this job.
 
 ### Job-to-be-Done
 
+**When** payday comes and I'm going home to Mutare on Saturday with groceries for my mother,
+**I want to** know on Friday that my seat is secured and when the bus will really leave,
+**So I can** sleep instead of queueing at 6am, arrive home before midday with everything intact, and tell my mother exactly when to meet me.
+
 ### Triggers
+
+**What specific event causes them to search for a solution?** A bad trip. She queued from 6am, the first two buses filled before she reached the door, she got home after 2pm, and her mother waited at the Mutare rank for hours. The bad trip is the lead trigger; a late or incomplete parcel is secondary.
+
+**How often does this happen?** She travels home every month. A bad trip happens a few times a year, almost always on month-end Saturdays, at Easter and in the Christmas rush, when fares also jump.
+
+**What's the cost (time, money, emotional)?**
+- **Time:** half of a two-day weekend lost (4–6 hours queueing and waiting).
+- **Money:** festive fares up to double, plus local transport to and from the rank.
+- **Emotional:** guilt at making her mother wait, and fear of carrying money and goods through a crowd.
 
 ### Current Alternatives
 
+**What are they doing today to handle the job?**
+- She queues at the rank for whichever Mutare bus is loading first (TENDA, CAG or another operator). She's loyal to whoever leaves first.
+- She has never booked a bus online, CAG's pre-booking included, so TENDA would be her first online booking.
+- For parcels, she uses a conductor, a travelling relative, or a WhatsApp courier ("from US$5").
+
+**How long have they been doing it that way?** Since she moved to Harare, about 8 years.
+
+**How satisfied are they (1-10) with the current approach?** 4. She always gets home eventually and the fare is fine, but she hates the queue and the uncertainty.
+
 ### Pains & Frustrations
+
+**Pain 1:** "I don't know if the 7am will be full until I'm standing there." She wakes at 4:30, queues at 6, and gets on at 8:30. *Fix: a live seat count per departure ("12 seats left") she can check on Friday.*
+
+**Pain 2:** "If I pay online, how do I know the seat is real when I get there?" *Fix: a WhatsApp ticket from TENDA's verified business number with her name and seat number, and the "your seat or your money back" guarantee shown beside the Pay button.*
+
+**Pain 3:** "My mother waits at the rank not knowing which bus I'm on or when it'll arrive." *Fix: an automatic "Rudo's bus left Harare at 7:05, expected in Mutare 10:40" message to her saved family contact.*
+
+**Pain 4:** "I give the parcel to the conductor and just hope." *Fix: a waybill reference at drop-off and a collection code sent to her mother.*
+
+**Pain 5:** "If my manager changes my Saturday shift, I lose my fare." *Fix: free date change up to a cut-off (for example 6pm the day before), done from the WhatsApp ticket in a couple of taps, with the refund rule shown at checkout.*
 
 ### Decision Criteria & Objections
 
+**Top 3 things they'll evaluate a solution on:**
+1. **Price:** a booked seat must cost exactly the rank fare, with no booking fee.
+2. **The seat is really there:** proof on her phone from TENDA itself.
+3. **Easy to pay and change:** EcoCash or cash, and she can move the date if her shift changes.
+
+**The objection that most often kills the deal:** "What if I pay on EcoCash and the bus is full anyway, or they say they never got my money?"
+
+**The proof that would overcome that objection:**
+- A WhatsApp ticket from TENDA's verified number.
+- "Your seat or your money back plus the next coach free", stated plainly at checkout.
+- Above all, a workmate or relative who has already booked and boarded with it. Word of mouth in her WhatsApp groups is her strongest proof.
+
 ### Willingness to Pay
+
+**What they currently spend on the problem (money + time):**
+- Fare: about US$10–15 each way. TENDA was reported at about US$10, CAG at US$15. At holidays it's up to double.
+- Local transport to and from the rank: about US$1–2 each way. *[Research-backed; confirm.]*
+- Time: 4–6 hours queueing and waiting on a bad trip.
+- A typical month-end round trip costs US$25–35, about 10–12% of her monthly pay.
+
+**Anchor products and their prices:**
+- CAG Travellers Harare–Mutare: US$15
+- A bus parcel to Mutare: about US$10
+- A WhatsApp courier: "from US$5"
+- Econet WhatsApp bundle: about US$1 a week
+
+**Acceptable price:**
+- A booked seat: exactly the rank fare.
+- A parcel: US$5–10 depending on size, paid either by Rudo at drop-off or by her family at collection.
+
+**Price ceiling (above which they'd say "I'll think about it"):** Anything above the rank fare for a seat, and she'll queue instead. Above about US$10 for a parcel, she'll find a travelling relative.
+
+**Budget bucket (personal / business / discretionary):** Personal, from her salary at month-end. Parcel fees are sometimes paid by the family in Mutare.
 
 ### Watering Holes
 
+**Specific communities (name them):**
+- Her family and workmates' WhatsApp groups (the most powerful, but private).
+- Facebook groups "MUTARE ZIMBABWE", "Mutare Community" and "Mutare Community group 2".
+- The bus-fan groups "Zimbabwe Long Distance Buses (ALL BUSES INCL.)" and "Highways & Heritage", which she mostly sees through shares.
+- Her church group in Glen View.
+
+**Specific podcasts / newsletters / channels (name them):**
+- **Radio:** Diamond FM (Mutare) and Star FM (Harare), morning and drive-time shows. *[Research-backed; confirm which stations she listens to.]*
+- **Facebook and TikTok:** bus-spotter accounts Chiwambu Transit Eye and African Highway Diaries; Baxter The Traveler on TikTok, who has filmed TENDA trips.
+- **News:** The Manica Post (Manicaland's regional paper), H-Metro and ZimLive.
+
+**People they trust and follow (name them):** Her own workmates and relatives who've done the trip. After them, local Mutare Facebook pages. Not ads from businesses she doesn't know.
+
 ### Anti-Persona
+
+**Who looks similar but is a bad fit?** The informal cross-border trader or bulk vendor who travels Harare ⇄ Mutare (and on to the Forbes border post) several times a week with large loads of goods. They want luggage space, cheap freight and the freedom to jump on any bus at the last minute.
+
+**Why would those people churn or complain?** They book, then no-show or change constantly, which wastes seats Rudo-type travellers could have had. Their luggage won't fit seat-ticket allowances, and they'll argue the guarantee every week.
+
+**How do we keep them from signing up in the first place?**
+- A clear luggage allowance per seat (for example 1 bag plus 1 hand item, up to [X] kg). Bulk goods go as paid parcels, not luggage.
+- One free date change per booking, not unlimited changes.
+- No-shows forfeit the fare unless the change was made before the cut-off.
+
+*Based on: the Product Offer, 5 web research passes (salary scales, data bundle prices, festive fare reports, Mutare community groups, bus and parcel pricing), and the member's answers. 0 customer interviews. Recommended next step: 5 conversations with Harare-based Manicaland travellers to validate Problem Context, Triggers, Pains, Willingness to Pay and radio habits.*
 
 ## 3. Pricing Strategy
 
@@ -186,3 +306,24 @@ Researched October 2026.
   - Pesepay specialises in EcoCash.
   - Card support must be confirmed in the PRD.
 - **Constraint:** Stripe does not onboard Zimbabwean businesses, so the web-app shape's default Stripe checkout is replaced by a local gateway.
+
+### Customer Persona
+
+Researched October 2026.
+
+- **Salaries:**
+  - National average about US$253 a month (wage.is, February 2026, https://wage.is/zimbabwe/).
+  - Civil-service scale about US$370 to nearly US$900 (The Herald, https://www.heraldonline.co.zw/civil-servants-smile-to-the-bank-as-revised-salaries-kick-in/).
+  - C-band US$463–536 (ZiFM News on Facebook).
+- **Data costs:** Econet WhatsApp bundles cost US$0.50–1.50 a week and US$3–7 a month (Paynow guide, https://paynow.co.zw/blog/complete-guide-to-econet-usd-bundles-pricing-validity-and-how-to-buy-online/; Econet, https://www.econet.co.zw/usd-data-bundles/).
+- **Festive fares:**
+  - Transport owners "double their fares" (GroundUp, https://groundup.org.za/article/zimbabweans-festive-season-travel-no-holiday_693/).
+  - Rural fares hiked 50% (The Herald, https://www.heraldonline.co.zw/rural-bus-operators-hike-fares/).
+  - Facebook thread: "Why are Zimbabwe bus fares higher on Christmas?"
+- **Communities:**
+  - Facebook groups "MUTARE ZIMBABWE" (https://www.facebook.com/groups/241169327298644/), "Mutare Community" (https://www.facebook.com/groups/1332436687469818/) and "Mutare Community group 2" (https://www.facebook.com/groups/463194299606850/).
+  - Bus groups "Zimbabwe Long Distance Buses (ALL BUSES INCL.)" and "Highways & Heritage".
+  - Manica Post on Facebook.
+- **Fare and parcel anchors:** see the Product Offer sources (CAG US$15; bus parcel about US$10; WhatsApp courier from US$5).
+- **Member-confirmed:** the persona is the woman who is the family's Harare link, near-average income, travels Saturday morning, arrives early and queues, pays by mobile money and cash, has never booked online, needs date changes, the bad trip is the lead trigger, a booked seat must cost exactly the rank fare, parcels can be paid at drop-off or collection, and she listens to radio.
+- **Unverified assumptions:** her name, age and neighbourhood are illustrative; local transport cost to the rank; specific radio stations.
