@@ -249,19 +249,64 @@ The real cost of her habit is time and sleep, not money.
 
 ## 3. Pricing Strategy
 
-*Filled by `define-pricing`.*
-
 ### Who Pays
+
+Rudo, the traveller, pays from her personal month-end salary, per trip. The buyer is the user. Parcels are paid either by Rudo at drop-off or by her family in Mutare at collection. The value is linked to a transaction: each seat and each parcel is a separate purchase.
 
 ### How the Business Earns
 
+**Supports another business.** The booking site charges no fee of its own; it earns for TENDA's coach business in three ways:
+- filling more seats, by taking passengers from the queue and from CAG;
+- selling more parcels;
+- cutting empty seats from no-shows.
+
+Rejected: a booking fee or paid membership. Rudo won't pay a cent above the rank fare, so any surcharge would send her back to the queue.
+
 ### Pricing Model
+
+| Decision | Choice |
+| --- | --- |
+| **Billing unit** | Per seat, per trip, at the rank fare. Parcels by size band. |
+| **Plans** | One fare for everyone; no tiers. |
+| **Entry** | Book free, no account needed. Two ways to pay: **EcoCash at checkout**, or **reserve and pay cash** at a TENDA office or agent by 6pm the day before departure (the seat is released if unpaid). Cash reservations are capped at about 20% of each coach's seats. |
+| **Cadence** | Pay per trip. Paid seats get one free date change before the cut-off (6pm the day before); after that, no-shows forfeit the fare. |
+| **Extra use** | 1 bag plus 1 hand item per seat; extra goods travel as a paid parcel. |
+| **Festive promise** | Book by 15 December (or 2 weeks before Easter) and pay the normal fare; walk-ups pay the festive fare. |
+
+**The whole offer in one sentence:** For Manicaland travellers in Harare, TENDA delivers a guaranteed seat home for US$10 per seat per trip (the same as the rank fare), including WhatsApp ticket and departure updates to her family; parcels start from US$5, and booking ahead locks the normal fare even at Christmas.
 
 ### Price Anchors
 
+- **CAG Travellers, Harare–Mutare: US$15.** TENDA sits US$5 below, with a seat guarantee and family updates CAG doesn't offer.
+- **Bus parcel to Mutare, about US$10, and a WhatsApp courier "from US$5".** TENDA parcels start at US$5 and add a receipt, a same-day promise and a collection code.
+- **Festive fares across Zimbabwe: up to double the normal fare.** TENDA's book-ahead promise keeps the normal fare, the strongest reason to book online.
+
 ### Launch Price
 
+**Seat: US$10 per trip, Harare–Mutare,** the reported TENDA rank fare. *[Working figure; confirm TENDA's current fare before launch.]*
+
+**Parcels, advertised as "from US$5":**
+- Small (documents, up to 2 kg): US$5
+- Medium (a grocery bag, up to 10 kg): US$7
+- Large (up to 25 kg): US$10
+
+**Value ceiling:** the rank fare. Rudo's real gain is time and certainty (4–6 hours saved on a bad trip), not money, so she won't pay above the rank fare. For parcels, the ceiling is about US$10, the point where a travelling relative becomes the alternative.
+
+**Cost floor per online seat:**
+- Gateway fee: about US$0.30–0.50 (3–5% of US$10) *[working assumption]*.
+- WhatsApp: about 7 utility messages (to Rudo and her family contact) at US$0.004 each, about US$0.03.
+- SMS fallback: about US$0.05 *[working assumption]*.
+- Guarantee payouts: rare, because seats are capped at real capacity.
+
+**Anchor position:** US$5 under CAG, equal to the rank, and up to half the walk-up price at Christmas.
+
+**Sanity line:** US$10 − about US$0.58 direct cost ≈ **US$9.40 kept per online seat**. That's positive, and every seat filled that would otherwise have gone empty is almost pure gain for TENDA.
+
 ### Your Price Line
+
+**DM version:** "Book your TENDA seat to Mutare online. Same price as the rank, US$10, no queue, and your seat is guaranteed. Book by 15 December and you pay the normal fare, even at Christmas."
+
+**Full version:** For Manicaland travellers in Harare, TENDA delivers a guaranteed seat home for US$10 per seat per trip (the same as the rank fare), including WhatsApp ticket and departure updates to her family; parcels start from US$5, and booking ahead locks the normal fare even at Christmas.
 
 ## 4. Business Strategy *(optional)*
 
@@ -327,3 +372,19 @@ Researched October 2026.
 - **Fare and parcel anchors:** see the Product Offer sources (CAG US$15; bus parcel about US$10; WhatsApp courier from US$5).
 - **Member-confirmed:** the persona is the woman who is the family's Harare link, near-average income, travels Saturday morning, arrives early and queues, pays by mobile money and cash, has never booked online, needs date changes, the bad trip is the lead trigger, a booked seat must cost exactly the rank fare, parcels can be paid at drop-off or collection, and she listens to radio.
 - **Unverified assumptions:** her name, age and neighbourhood are illustrative; local transport cost to the rank; specific radio stations.
+
+### Pricing Strategy
+
+Researched October 2026.
+
+- **Business model:** `productos/define/BONUS-Business-Models.md#business-15-supports-another-business`. Pricing layers and price setting: `productos/define/BONUS-Pricing-Models.md` ("Keep the layers separate"; chapter 25).
+- **Anchors:**
+  - CAG Travellers Harare–Mutare US$15 (Rome2Rio, https://www.rome2rio.com/s/Harare/Mutare).
+  - Bus parcel about US$10 (Zimbabwe Long Distance Buses Facebook group).
+  - WhatsApp courier "from US$5" (Instagram listing).
+  - Festive fare hikes up to double (GroundUp; The Herald).
+- **Cost floor:**
+  - WhatsApp utility messages for the "Rest of Africa" region (including Zimbabwe): US$0.004 each (SleekFlow rate table as of 1 October 2026, https://sleekflow.io/en-us/blog/whatsapp-business-price; Meta pricing, https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing).
+  - Payment gateway fee of 3–5%: *[working assumption]*; Paynow and ContiPay merchant fees aren't published and must be confirmed. Paynow notes bank-to-wallet fees of 1.5–5% (https://paynow.co.zw/blog/ecocash-charges-understanding-how-much-you-pay/).
+  - SMS fallback about US$0.05 per message: *[working assumption]*.
+- **Member-confirmed:** no booking fee (seat equals the rank fare); fixed fare for advance bookers at festive peaks; US$10 working seat price; parcels advertised "from US$5"; cash reservations held until 6pm the day before and capped at about 20% of each coach.
