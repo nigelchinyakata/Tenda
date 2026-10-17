@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TENDA">
+  <!-- Placeholder icon (concept 1 "The Pass" direction) until the final logo is designed -->
+  <rect width="64" height="64" rx="14" fill="#0A2550"/>
+  <path d="M10 22 L22 14 L32 20 L42 12 L54 20 V27 H10Z" fill="#1668D0"/>
+  <path d="M13 22 H51 L49 30 H38 L32 54 H22 L28 30 H11Z" fill="#FFFFFF"/>
+  <path d="M8 48 C 22 46, 30 40, 56 30" stroke="#F2B233" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg>
