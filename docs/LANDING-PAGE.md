@@ -161,7 +161,7 @@ Recommended next refresh: 45 days from launch. First A/B test: the hero headline
   - navy (for the header on white)
   - white (for navy bands)
   - white with "The Pride Of Manicaland" (for the footer)
-- **Images:** four prompts for the member to run in ChatGPT. The images should be replaced with commissioned documentary photos before launch: the Identity rules out models and stock, and AI images of "real people" break Tactic #6.
+- **Images:** generated in Higgsfield (Nano Banana 2, October 2026) from the four prompts below and placed on the canvas: hero, Problem, the parcel card and the final CTA. Copies are in `docs/brand/photos/`. They are stand-ins: replace them with commissioned documentary photos before launch, because the Identity rules out models and stock, and AI images of "real people" break Tactic #6.
   1. "Documentary photo, early morning golden light, a Zimbabwean woman about 32 in work clothes holding two grocery bags, standing at a busy Harare long-distance bus terminus, a blue-and-white coach behind her slightly out of focus, natural candid expression, shot on 35mm, warm and honest, no text, wide 16:9 with open sky at the top"
   2. "Documentary photo, a Zimbabwean woman in her 60s in a headwrap waiting at a rural town bus rank in Manicaland, holding her phone and smiling at a message, mountains in the background, soft morning light, candid, no text, 4:5"
   3. "Documentary photo, a blue-and-white intercity bus on a winding mountain road through green Manicaland hills (Christmas Pass, near Mutare), early light, wide shot with generous sky and road, no text, no logos, 16:9"
